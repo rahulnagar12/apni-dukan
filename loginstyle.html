@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass morfisome effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Raleway:wght@200&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(../images/3.jpg);
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+        }
+        
+        body::before {
+            content: '';
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        
+        .container {
+            width: 350px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.255);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid #ffffff80;
+            display: flex;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(2px);
+        }
+        
+        input::placeholder {
+            color: #fff;
+            text-align: left;
+            padding-left: 10px;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+        
+        form {
+            width: 275px;
+            margin: 0 auto;
+        }
+        
+        form input {
+            margin: 15px 0;
+            width: 100%;
+            height: 40px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid #ffffff80;
+            border-radius: 9px;
+            border-right: none;
+            border-bottom: none;
+            text-align: center;
+            color: #fff;
+        }
+        
+        label {
+            display: block;
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        
+        form h1 {
+            color: #fff;
+            font-size: 33px;
+        }
+        
+        form h5 {
+            font-size: 15px;
+            margin: 10px 0 20px 0;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .btn1 {
+            position: relative;
+            text-align: center;
+            width: 120px;
+            height: 40px;
+            font-size: 22px;
+            border: none;
+            font-weight: 400;
+            cursor: pointer;
+            border-radius: 100px;
+            letter-spacing: 1px;
+            transition: 0.8s;
+            background-color: green;
+            color: white;
+        }
+        
+        .btn {
+            position: relative;
+            text-align: center;
+            color: white;
+            background-color: green;
+            width: 120px;
+            height: 40px;
+            font-size: 22px;
+            border: none;
+            font-weight: 400;
+            cursor: pointer;
+            border-radius: 100px;
+            letter-spacing: 1px;
+            transition: 0.8s;
+            margin-left: 30px;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .btn:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        
+        .btn1:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        
+        form a {
+            text-decoration: none;
+            color: lightblue;
+            display: inline;
+            text-align: right;
+        }
+        
+        .container a h5:hover {
+            color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+            <h1> Welcome back !</h1>
+            <h5>Login to your account</h5>
+            <br>
+            <label for="">Username </label>
+            <input type="text" placeholder="Username">
+            <br>
+            <label for="">Password </label>
+            <input type="password" placeholder="********">
+            <br>
+            <a href="#">
+                <h5>forget password ?</h5>
+            </a>
+            <button class="btn1" type="submit">sign in</button>
+            <button class="btn"><a href="snupform.html"> sign up</a></button>
+
+        </form>
+
+    </div>
+    <script type="text/javascript " src="../js/tilt.js "></script>
+    <script type="text/javascript ">
+        VanillaTilt.init(document.querySelector(".container "))
+    </script>
+
+
+</body>
+
+</html>
